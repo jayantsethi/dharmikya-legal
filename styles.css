@@ -417,16 +417,12 @@ section {
     flex-shrink: 0;
 }
 
-.photo-placeholder {
+.member-image {
     width: 160px;
     height: 160px;
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 3rem;
+    object-fit: cover;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .member-info h3 {
@@ -486,8 +482,14 @@ section {
 }
 
 .blog-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
 }
 
 .blog-card {
@@ -944,10 +946,9 @@ section {
         padding: 40px 30px;
     }
     
-    .photo-placeholder {
+    .member-image {
         width: 150px;
         height: 150px;
-        font-size: 3rem;
     }
     
     .member-credentials {
@@ -1010,6 +1011,10 @@ section {
     
     .contact-card {
         padding: 30px 20px;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
     }
     
     .blog-card {
